@@ -22,5 +22,12 @@ export default {
   color: #2c3e50
 
 .--flex-end
-  margin-left: auto
+  justify-content: flex-end
+
+.dropdown
+  appearance: none
+  background-image: url('assets/dropdown.svg')
+  background-size: 10px
+  background-repeat: no-repeat
+  background-position: 96% 50%
 </style>

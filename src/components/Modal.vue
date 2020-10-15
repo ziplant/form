@@ -6,7 +6,6 @@
   </teleport>
 </template>
 
-
 <style lang="sass">
 .modal
   position: fixed
@@ -17,5 +16,5 @@
   box-shadow: 0 0 3px -1px #000
   border-radius: 3px
   font-size: 20pxpx
-  background-color: #bbb
+  background-color: #dedede
 </style>

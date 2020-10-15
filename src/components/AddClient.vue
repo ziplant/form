@@ -80,7 +80,7 @@
       <div class="addForm_elem">
         <span>Лечащий врач</span>
         <div class="addForm_field">
-          <select v-model="form.therapist">
+          <select v-model="form.therapist" class="dropdown">
             <option
               v-for="item in placeholder.therapist"
               :key="item.id"
@@ -91,12 +91,10 @@
           </select>
         </div>
       </div>
-      <div class="addForm_elem">
-        <label class="--flex-end">
-          <span>Не отправлять СМС</span>
-          <input v-model="form.nosms" type="checkbox" />
-        </label>
-      </div>
+      <label class="addForm_elem --flex-end">
+        <span>Не отправлять СМС</span>
+        <input v-model="form.nosms" type="checkbox" />
+      </label>
     </div>
     <div class="addForm_section">
       <h3 class="addForm_subtitle">Адрес</h3>
@@ -145,7 +143,7 @@
       <div class="addForm_elem">
         <span>Тип документа</span>
         <div class="addForm_field">
-          <select v-model="form.doctype">
+          <select v-model="form.doctype" class="dropdown">
             <option
               v-for="item in placeholder.doctype"
               :key="item.id"
@@ -261,36 +259,49 @@ export default {
   padding: 20px 0
   max-width: 600px
   margin: auto
+  h2, h3
+    text-align: right
   &_section
     padding: 5px 0px
   &_elem
     display: flex
-    margin-bottom: 15px
+    align-items: center
+    margin-bottom: 20px
     span
-      width: 25%
+      width: 170px
       min-width: 100px
       text-align: right
-      padding-top: 5px
-      padding-right: 10px
-      flex-shrink: 0
-
+      padding: 0px 10px
+      box-sizing: border-box
   &_field
     flex-grow: 1
-    input
-      padding: 10px 5px
-
+    position: relative
     label
       margin: 0 5px
-
     option
       padding: 5px
     & > input,
     & > select
-
+      background-color: #f9f9f9
+      border-radius: 5px
+      border: 1px solid #d6d2c4
+      outline: none
+      padding: 6px
       width: 100%
       min-width: 50px
       box-sizing: border-box
+      &:focus
+        box-shadow: 0px 0px 0px 1px #d6d2c4
   &_submit
     width: 100%
+    margin-top: 15px
     padding: 5px
+    background-color: #ededed
+    border-radius: 5px
+    cursor: pointer
+    border: 1px solid #ababab
+    &:hover
+     background-color: #dedede
+    &:disabled
+      pointer-events: none
 </style>
