@@ -91,10 +91,12 @@
           </select>
         </div>
       </div>
-      <label class="addForm_elem --flex-end">
-        <span>Не отправлять СМС</span>
-        <input v-model="form.nosms" type="checkbox" />
-      </label>
+      <div class="addForm_elem">
+        <label class="flex flex--middle flex--right">
+          <span>Не отправлять СМС</span>
+          <input v-model="form.nosms" type="checkbox" />
+        </label>
+      </div>
     </div>
     <div class="addForm_section">
       <h3 class="addForm_subtitle">Адрес</h3>
@@ -257,7 +259,7 @@ export default {
 <style lang="sass">
 .addForm
   padding: 20px 0
-  max-width: 600px
+  max-width: 700px
   margin: auto
   h2, h3
     text-align: right
@@ -268,15 +270,18 @@ export default {
     align-items: center
     margin-bottom: 20px
     span
-      width: 170px
+      padding: 0px 10px
+    > span
+      width: 25%
       min-width: 100px
       text-align: right
-      padding: 0px 10px
       box-sizing: border-box
   &_field
     flex-grow: 1
     position: relative
     label
+      display: inline-block
+      min-width: 100px
       margin: 0 5px
     option
       padding: 5px

@@ -21,13 +21,17 @@ export default {
   text-align: center
   color: #2c3e50
 
-.--flex-end
-  justify-content: flex-end
-
 .dropdown
   appearance: none
   background-image: url('assets/dropdown.svg')
   background-size: 10px
   background-repeat: no-repeat
   background-position: 96% 50%
+
+.flex
+  display: flex
+  &--middle
+    align-items: center
+  &--right
+    margin-left: auto
 </style>
